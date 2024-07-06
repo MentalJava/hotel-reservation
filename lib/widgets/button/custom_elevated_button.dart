@@ -15,9 +15,7 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        onClickEvent;
-      },
+      onPressed: onClickEvent,
       child: Text(
         title,
         style: TextStyle(

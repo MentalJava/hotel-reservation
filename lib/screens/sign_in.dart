@@ -57,24 +57,25 @@ class SignIn extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SignTextButton(
+                  const SignTextButton(
                     title: 'CANCEL',
                     fontsize: 17,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   SignTextButton(
                     title: 'Sign Up',
                     fontsize: 17,
+                    onClickEvent: () => Get.toNamed('/signup'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
-                  CustomElevatedButton(
+                  const CustomElevatedButton(
                     title: 'NEXT',
                     fontsize: 17,
                   ),

@@ -75,9 +75,10 @@ class SignIn extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                  const CustomElevatedButton(
+                  CustomElevatedButton(
                     title: 'NEXT',
                     fontsize: 17,
+                    onClickEvent: () => Get.toNamed('/home'),
                   ),
                 ],
               ),

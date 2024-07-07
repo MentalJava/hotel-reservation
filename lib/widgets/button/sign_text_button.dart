@@ -15,9 +15,7 @@ class SignTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        onClickEvent;
-      },
+      onPressed: onClickEvent,
       child: Text(
         title,
         style: TextStyle(

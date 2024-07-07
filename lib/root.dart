@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hotel_reservation/screens/home.dart';
 import 'package:hotel_reservation/screens/sign_in.dart';
 import 'package:hotel_reservation/screens/sign_up.dart';
 
@@ -21,6 +22,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/signup',
           page: () => SignUp(),
+        ),
+        GetPage(
+          name: '/home',
+          page: () => const Home(),
         ),
       ],
     );

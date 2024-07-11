@@ -5,7 +5,7 @@ import 'package:hotel_reservation/controllers/view_toggle_controller.dart';
 class ListToggleButton extends StatelessWidget {
   final ViewToggleController viewToggleController =
       Get.put(ViewToggleController());
-  final RxList<bool> selections = [true, false].obs;
+  final RxList<bool> selections = List.generate(2, (index) => false).obs;
 
   ListToggleButton({
     super.key,
@@ -23,16 +23,13 @@ class ListToggleButton extends StatelessWidget {
         child: Obx(() {
           return ToggleButtons(
             onPressed: (index) {
-              for (int i = 0; i < selections.length; i++) {
-                selections[i] = i == index;
-              }
-              viewToggleController.toggleView();
+              viewToggleController.setToggleButton();
             },
-            isSelected: selections,
+            isSelected: viewToggleController.selections,
             selectedColor: Colors.blue[200],
             children: const [
-              Icon(Icons.grid_view),
               Icon(Icons.list),
+              Icon(Icons.grid_view),
             ],
           );
         }),

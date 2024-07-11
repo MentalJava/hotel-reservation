@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_reservation/widgets/card_rayout/build_card.dart';
+import 'package:hotel_reservation/widgets/card_layout/grid_card.dart';
+import 'package:hotel_reservation/models/hotel_list.dart';
 
-class GridviewRayout extends StatelessWidget {
-  const GridviewRayout({
+class GridviewLayout extends StatelessWidget {
+  const GridviewLayout({
     super.key,
   });
 
@@ -15,9 +16,11 @@ class GridviewRayout extends StatelessWidget {
         mainAxisSpacing: 10,
         childAspectRatio: 8.0 / 10,
       ),
-      itemCount: 10,
+      itemCount: HotelList().hotels.length,
       itemBuilder: (context, index) {
-        return const BuildCard();
+        return GridCard(
+          index: index,
+        );
       },
     );
   }

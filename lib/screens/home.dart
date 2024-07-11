@@ -4,8 +4,8 @@ import 'package:hotel_reservation/controllers/view_toggle_controller.dart';
 import 'package:hotel_reservation/screens/home_drawer.dart';
 import 'package:hotel_reservation/widgets/button/home_icon_button.dart';
 import 'package:hotel_reservation/widgets/button/list_toggle_button.dart';
-import 'package:hotel_reservation/widgets/card_rayout/gridview_rayout.dart';
-import 'package:hotel_reservation/widgets/card_rayout/listview_rayout.dart';
+import 'package:hotel_reservation/widgets/card_layout/gridview_layout.dart';
+import 'package:hotel_reservation/widgets/card_layout/listview_layout.dart';
 
 class Home extends StatelessWidget {
   final ViewToggleController viewToggleController =
@@ -48,8 +48,8 @@ class Home extends StatelessWidget {
             child: Obx(
               () {
                 return viewToggleController.isGridView.value
-                    ? const GridviewRayout()
-                    : const ListviewRayout();
+                    ? const ListviewLayout()
+                    : const GridviewLayout();
               },
             ),
           ),

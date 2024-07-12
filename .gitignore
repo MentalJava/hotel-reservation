@@ -11,6 +11,8 @@
 .atom/
 .buildlog/
 .history
+.h
+.swift
 .svn/
 migrate_working_dir/
 

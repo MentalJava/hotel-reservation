@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hotel_reservation/screens/favorite_hotel_list.dart';
 import 'package:hotel_reservation/screens/home.dart';
 import 'package:hotel_reservation/screens/sign_in.dart';
 import 'package:hotel_reservation/screens/sign_up.dart';
@@ -26,6 +27,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/home',
           page: () => Home(),
+        ),
+        GetPage(
+          name: '/favorite',
+          page: () => FavoriteHotelList(),
         ),
       ],
     );

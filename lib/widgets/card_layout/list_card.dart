@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hotel_reservation/models/hotel_list.dart';
+import 'package:hotel_reservation/screens/home_detail.dart';
 import 'package:hotel_reservation/widgets/rating/list_hotel_rating_star.dart';
 
 class ListCard extends StatelessWidget {
@@ -26,13 +28,16 @@ class ListCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                HotelList().hotels[index].image,
-                fit: BoxFit.cover,
-                height: 120,
-                width: 120,
+            Hero(
+              tag: 'hotel_image_$index',
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  HotelList().hotels[index].image,
+                  fit: BoxFit.cover,
+                  height: 120,
+                  width: 120,
+                ),
               ),
             ),
             const SizedBox(
@@ -81,7 +86,12 @@ class ListCard extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(
+                            () => HomeDetail(
+                                hotel: HotelList().hotels[index], index: index),
+                          );
+                        },
                       ),
                     ),
                   ],

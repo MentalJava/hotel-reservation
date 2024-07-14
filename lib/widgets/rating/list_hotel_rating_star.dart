@@ -5,7 +5,7 @@ Widget listHotelRating(int starCount) {
   for (int i = 0; i < starCount; i++) {
     stars.add(
       Transform.translate(
-        offset: const Offset(-5, 0),
+        offset: const Offset(-3, 0),
         child: const Icon(
           Icons.star_rate_rounded,
           color: Colors.yellow,

@@ -10,6 +10,7 @@ import 'package:hotel_reservation/widgets/card_layout/listview_layout.dart';
 class Home extends StatelessWidget {
   final ViewToggleController viewToggleController =
       Get.put(ViewToggleController());
+
   Home({super.key});
 
   @override

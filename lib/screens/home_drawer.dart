@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hotel_reservation/screens/favorite_hotel_list.dart';
 import 'package:hotel_reservation/widgets/button/home_drawer_button.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -45,6 +47,9 @@ class HomeDrawer extends StatelessWidget {
             title: 'Search',
           ),
           HomeDrawerButton(
+            onClickEvent: () {
+              Get.to(FavoriteHotelList());
+            },
             icon: Icon(
               Icons.location_city,
               color: Colors.blue[200],

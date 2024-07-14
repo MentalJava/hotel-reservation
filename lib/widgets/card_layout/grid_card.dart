@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotel_reservation/models/hotel_list.dart';
-import 'package:hotel_reservation/widgets/grid_hotel_rating_star.dart';
+import 'package:hotel_reservation/screens/home_detail.dart';
+import 'package:hotel_reservation/widgets/rating/grid_hotel_rating_star.dart';
 
 class GridCard extends StatelessWidget {
   const GridCard({super.key, required this.index});
@@ -20,16 +21,19 @@ class GridCard extends StatelessWidget {
           elevation: 3,
           child: Column(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  HotelList().hotels[index].image,
-                  fit: BoxFit.cover,
-                  height: 130,
-                  width: Get.width,
+              Hero(
+                tag: 'hotel_image_$index',
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    HotelList().hotels[index].image,
+                    fit: BoxFit.cover,
+                    height: 130,
+                    width: Get.width,
+                  ),
                 ),
               ),
-              gridRatingStar(HotelList().hotels[index].star),
+              gridHotelRating(HotelList().hotels[index].star),
               Transform.translate(
                 offset: const Offset(0, -10),
                 child: ListTile(
@@ -57,16 +61,24 @@ class GridCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Transform.translate(
-                offset: const Offset(-10, -5),
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    'more',
-                    style: TextStyle(
-                      color: Colors.blue[200],
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+              GestureDetector(
+                onTap: () {
+                  Get.to(
+                    () => HomeDetail(
+                        hotel: HotelList().hotels[index], index: index),
+                  );
+                },
+                child: Transform.translate(
+                  offset: const Offset(-10, -5),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      'more',
+                      style: TextStyle(
+                        color: Colors.blue[200],
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

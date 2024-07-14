@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget gridRatingStar(int starCount) {
+Widget gridHotelRating(int starCount) {
   List<Widget> stars = [];
   for (int i = 0; i < starCount; i++) {
     stars.add(

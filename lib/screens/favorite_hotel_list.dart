@@ -27,8 +27,8 @@ class FavoriteHotelList extends StatelessWidget {
           itemCount: favoriteController.favoriteHotels.length,
           itemBuilder: (context, index) {
             final hotelName = favoriteController.favoriteHotels[index];
-            final hotel =
-                hotellist.hotels.firstWhere((h) => h.name == hotelName);
+            final hotel = hotellist.hotels
+                .firstWhere((h) => h.name == hotelName); // list 안에 첫번째 일치값 가져오기
             return Dismissible(
               key: Key(hotelName),
               background: Container(color: Colors.red),

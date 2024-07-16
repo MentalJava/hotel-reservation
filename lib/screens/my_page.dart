@@ -10,10 +10,10 @@ class MyPage extends StatefulWidget {
   const MyPage({super.key});
 
   @override
-  State<MyPage> createState() => _RiveDemoState();
+  State<MyPage> createState() => _MyPageState();
 }
 
-class _RiveDemoState extends State<MyPage> {
+class _MyPageState extends State<MyPage> {
   final FavoriteController favoriteController = Get.put(FavoriteController());
   final hotellist = HotelList();
   Artboard? riveArtboard;
@@ -56,7 +56,7 @@ class _RiveDemoState extends State<MyPage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text(
-          'Rive Demo',
+          'My Page',
           style: TextStyle(
             color: Colors.white,
           ),

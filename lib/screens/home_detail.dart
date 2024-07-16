@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotel_reservation/controllers/favorite_controller.dart';
-import 'package:hotel_reservation/models/hotel_list.dart';
 import 'package:hotel_reservation/models/hotel_list_model.dart';
 import 'package:hotel_reservation/widgets/rating/list_hotel_rating_star.dart';
 
@@ -76,14 +75,14 @@ class HomeDetail extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                listHotelRating(HotelList().hotels[index].star),
+                listHotelRating(hotel.star),
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 8,
                     bottom: 8,
                   ),
                   child: Text(
-                    HotelList().hotels[index].name,
+                    hotel.name,
                     style: const TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.bold,
@@ -105,7 +104,7 @@ class HomeDetail extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      HotelList().hotels[index].address,
+                      hotel.address,
                       style: TextStyle(
                         fontSize: 12,
                         color: Colors.indigo[300],
@@ -126,7 +125,7 @@ class HomeDetail extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      HotelList().hotels[index].phone,
+                      hotel.phone,
                       style: TextStyle(
                         fontSize: 12,
                         color: Colors.indigo[300],
@@ -136,7 +135,7 @@ class HomeDetail extends StatelessWidget {
                 ),
                 const Divider(),
                 Text(
-                  HotelList().hotels[index].description,
+                  hotel.description,
                   style: TextStyle(fontSize: 15, color: Colors.indigo[300]),
                 ),
               ],

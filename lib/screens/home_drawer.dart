@@ -59,6 +59,9 @@ class HomeDrawer extends StatelessWidget {
             title: 'Favorite Hotel',
           ),
           HomeDrawerButton(
+            onClickEvent: () {
+              Get.toNamed('/mypage');
+            },
             icon: Icon(
               Icons.person,
               color: Colors.blue[200],

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hotel_reservation/screens/favorite_hotel_list.dart';
 import 'package:hotel_reservation/screens/home.dart';
+import 'package:hotel_reservation/screens/my_page.dart';
 import 'package:hotel_reservation/screens/search_hotel.dart';
 import 'package:hotel_reservation/screens/sign_in.dart';
 import 'package:hotel_reservation/screens/sign_up.dart';
@@ -36,6 +37,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/search',
           page: () => SearchHotel(),
+        ),
+        GetPage(
+          name: '/mypage',
+          page: () => MyPage(),
         ),
       ],
     );

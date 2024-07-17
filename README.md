@@ -32,6 +32,11 @@ Hero, DateFormat, DateTime, **Rive**, Parallax 등 여러 위젯을 사용해서
 |![Favorite](https://github.com/user-attachments/assets/b74632ed-2c77-471b-9f38-e87f6ec7247b)|![MyPage](https://github.com/user-attachments/assets/01b65c54-7a70-4333-a41e-58bf9e690469)|
 
 
+|Rive Animation|
+|--|
+|![Rive Animation](https://github.com/user-attachments/assets/8b433c00-d2ce-46ba-995c-484c9bcdf74a)|
+
+
 </details>
 
 ## 프로젝트 기능 정리
